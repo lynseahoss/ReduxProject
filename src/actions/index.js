@@ -2,7 +2,7 @@
 export const searchTerm = term => {
     // Return an action
     return {
-      type: 'Term_Used',
+      type: 'SEARCH_TERM',
       payload: term
     };
   };
