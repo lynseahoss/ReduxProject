@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect} from "react";
+import { useDispatch, useSelector } from 'react-redux';
+
+import {termSearch} from '../actions/searchTermAction';
 
 const SearchBar = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+   dispatch(termSearch())
+  }, [dispatch]);
+
   return (
     <div className="columns">
       <div className="column is-three-fifths is-offset-one-fifth">
