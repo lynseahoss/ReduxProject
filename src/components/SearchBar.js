@@ -8,7 +8,7 @@ const SearchBar = () => {
   const dispatch = useDispatch();
   const searchTerm = useSelector((state) => state.searchTerm);
 
-  const { loading, error, term } = searchTerm;
+  const { loading, error, terms } = searchTerm;
 
   useEffect(() => {
     dispatch(termSearch());
@@ -39,7 +39,7 @@ const SearchBar = () => {
           </div>
         </div>
       <div className="column is-three-fifths is-offset-one-fifth">
-  {loading ? (<h2>Loading</h2>): error ?(<h2>{error}</h2>): ( <div>{term.map((data)=>(
+  {loading ? (<h2>Loading</h2>): error ?(<h2>{error}</h2>): ( <div>{terms.map((data)=>(
           <DisplayList key={data.id} title={data.title}/>
         ))}</div>)}
        

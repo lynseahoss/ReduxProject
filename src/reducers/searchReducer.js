@@ -1,9 +1,9 @@
 import { SEARCH_TERM_REQUEST, SEARCH_TERM_SUCESS,SEARCH_TERM_FAIL } from '../constants/termConstants';
 
-export const searchTermReducer = (state ={term:[]}, action)=>{
+export const searchTermReducer = (state ={terms:[]}, action)=>{
     switch(action.type){
         case SEARCH_TERM_REQUEST:
-        return { loading: true, term: [] }
+        return { loading: true, terms: [] }
         case SEARCH_TERM_SUCESS:
         return{ loading: false, terms: action.payload }
         case SEARCH_TERM_FAIL:
