@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import DisplayList from "./DisplayList";
 import { termSearch } from "../actions/searchTermAction";
+
+import DisplayList from './DisplayList';
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,8 @@ const SearchBar = () => {
   useEffect(() => {
     dispatch(termSearch());
   }, [dispatch]);
+
+const results = []
 
   return (
     <div className="columns">
@@ -35,6 +38,11 @@ const SearchBar = () => {
             </div>
           </div>
         </div>
+      <div className="column is-three-fifths is-offset-one-fifth">
+        {results.map((terms)=>(
+          <DisplayList key={terms.id} title={terms.title}/>
+        ))}
+      </div>
       </div>
     </div>
   );
