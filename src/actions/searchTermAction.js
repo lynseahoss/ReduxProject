@@ -8,7 +8,7 @@ import {
 
 const Hacker_URL = "https://hn.algolia.com/api/v1/search";
 
-export const termSearch = (term) => async (dispatch) => {
+export const termSearch = () => async (dispatch) => {
   try {
     dispatch({ type: SEARCH_TERM_REQUEST });
 
