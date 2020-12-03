@@ -14,7 +14,7 @@ const SearchBar = () => {
     dispatch(termSearch());
   }, [dispatch]);
 
-const results = []
+
 
   return (
     <div className="columns">
