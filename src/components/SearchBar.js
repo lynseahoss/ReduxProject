@@ -39,8 +39,8 @@ const results = []
           </div>
         </div>
       <div className="column is-three-fifths is-offset-one-fifth">
-        {results.map((terms)=>(
-          <DisplayList key={terms.id} title={terms.title}/>
+        {results.map((data)=>(
+          <DisplayList key={data.id} title={data.title}/>
         ))}
       </div>
       </div>
