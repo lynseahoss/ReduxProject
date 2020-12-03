@@ -6,13 +6,13 @@ import {
   SEARCH_TERM_FAIL,
 } from "../constants/termConstants";
 
-const Hacker_URL = "https://hn.algolia.com/api/v1/search";
+// const Hacker_URL = "https://hn.algolia.com/api/v1/search";
 
 export const termSearch = () => async (dispatch) => {
   try {
     dispatch({ type: SEARCH_TERM_REQUEST });
 
-    const { data } = await axios.get(`${Hacker_URL}?query=${term}`);
+    const {data} = await axios.get('https://hn.algolia.com/api/v1/search')
 
     dispatch({
       type: SEARCH_TERM_SUCESS,
