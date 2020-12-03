@@ -16,7 +16,7 @@ export const termSearch = (term) => async (dispatch) => {
 
     dispatch({
       type: SEARCH_TERM_SUCESS,
-      payload: data,
+      payload: data.hits,
     });
   } catch (error) {
     dispatch({
