@@ -3,7 +3,7 @@ import { SEARCH_TERM_REQUEST, SEARCH_TERM_SUCESS,SEARCH_TERM_FAIL } from '../con
 export const searchTermReducer = (state ={term:[]}, action)=>{
     switch(action.type){
         case SEARCH_TERM_REQUEST:
-        return { loading: true, terms: [] }
+        return { loading: true, term: [] }
         case SEARCH_TERM_SUCESS:
         return{ loading: false, terms: action.payload }
         case SEARCH_TERM_FAIL:
