@@ -8,11 +8,13 @@ import {
 
 // const Hacker_URL = "https://hn.algolia.com/api/v1/search";
 
-export const termSearch = () => async (dispatch) => {
+export const termSearch = (results) => async (dispatch) => {
   try {
+    const query = results
+
     dispatch({ type: SEARCH_TERM_REQUEST });
 
-    const {data} = await axios.get('http://hn.algolia.com/api/v1/search_by_date?query=')
+    const {data} = await axios.get(`http://hn.algolia.com/api/v1/search_by_date?query=${query}`)
 
     dispatch({
       type: SEARCH_TERM_SUCESS,
