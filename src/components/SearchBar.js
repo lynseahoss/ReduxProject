@@ -14,16 +14,24 @@ const SearchBar = () => {
     dispatch(termSearch());
   }, [dispatch]);
 
+  const handleSubmit = () =>{
+    
+       console.log(searchTerm)
+   }
 
+   const inputChange = e =>{
+   termSearch(e.target.value)
+}
 
   return (
     <div className="columns">
       <div className="column is-three-fifths is-offset-one-fifth">
-        <div className="field">
+        <form className="field" onSubmit={handleSubmit}>
           <input
             className="input"
             type="text"
             placeholder="Hackers News Search"
+            onChange={inputChange}
           />
           <div className="columns">
             <div className="column is-three-fifths is-offset-one-fifth">
@@ -37,7 +45,7 @@ const SearchBar = () => {
               </div>
             </div>
           </div>
-        </div>
+        </form>
       <div className="column is-three-fifths is-offset-one-fifth">
   {loading ? (<h2>Loading</h2>): error ?(<h2>{error}</h2>): ( <div>{terms.map((data, index)=>(
           <DisplayList key={index} title={data.title}/>
