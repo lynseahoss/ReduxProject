@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { termSearch } from "../actions/searchTermAction";
 
 import DisplayList from './DisplayList';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const [search, setSearch]= useState('')
+
   const dispatch = useDispatch();
-  const searchTerm = useSelector((state) => state.searchTerm);
+  const result = useSelector((state) => state.result);
 
   const { loading, error, terms } = searchTerm;
 
@@ -14,13 +16,15 @@ const SearchBar = () => {
     dispatch(termSearch());
   }, [dispatch]);
 
+
   const handleSubmit = () =>{
-    
-       console.log(searchTerm)
+     dispatch(termSearch(search))
+      !result.includes(search) 
+      setSearch("")
    }
 
    const inputChange = e =>{
-   termSearch(e.target.value)
+   setSearch(e.target.value)
 }
 
   return (
@@ -39,6 +43,7 @@ const SearchBar = () => {
                 <button
                   className="button is-primary is-fullwidth"
                   style={{ backgroundColor: "#ea4aaa", margin: "20px" }}
+                  onClick={() => props.history.push(`http://hn.algolia.com/api/v1/search?query=${search}`)}
                 >
                   Submit
                 </button>
