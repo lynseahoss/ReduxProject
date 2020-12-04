@@ -15,7 +15,7 @@ const SearchBar = () => {
   }, [dispatch]);
 
   const handleSubmit = () =>{
-    
+
        console.log(searchTerm)
    }
 
@@ -48,7 +48,7 @@ const SearchBar = () => {
         </form>
       <div className="column is-three-fifths is-offset-one-fifth">
   {loading ? (<h2>Loading</h2>): error ?(<h2>{error}</h2>): ( <div>{terms.map((data, index)=>(
-          <DisplayList key={index} title={data.title}/>
+          <DisplayList key={index} title={data.title} author={data.author} url={data.url} />
         ))}</div>)}
        
       </div>
