@@ -39,8 +39,8 @@ const SearchBar = () => {
           </div>
         </div>
       <div className="column is-three-fifths is-offset-one-fifth">
-  {loading ? (<h2>Loading</h2>): error ?(<h2>{error}</h2>): ( <div>{terms.map((data)=>(
-          <DisplayList key={data.id} title={data.title}/>
+  {loading ? (<h2>Loading</h2>): error ?(<h2>{error}</h2>): ( <div>{terms.map((data, index)=>(
+          <DisplayList key={index} title={data.title}/>
         ))}</div>)}
        
       </div>
