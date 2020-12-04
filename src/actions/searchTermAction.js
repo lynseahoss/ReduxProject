@@ -12,7 +12,7 @@ export const termSearch = () => async (dispatch) => {
   try {
     dispatch({ type: SEARCH_TERM_REQUEST });
 
-    const {data} = await axios.get('https://hn.algolia.com/api/v1/search')
+    const {data} = await axios.get('http://hn.algolia.com/api/v1/search_by_date?query=')
 
     dispatch({
       type: SEARCH_TERM_SUCESS,
