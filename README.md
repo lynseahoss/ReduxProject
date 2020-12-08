@@ -9,4 +9,4 @@
 - react-redux
 - redux-thunk
 - axios
-- node-sass 4.14.1
+- node-sass@4.14.1
