@@ -1,15 +1,21 @@
 import React from 'react';
-
-const Results = () => {
-    return (
+import ResultItem from './ResultItem';
+const Results = ({ search }) => {
+    
+        const resultList = search.map(searchResult=>{
+          return(
+            <ResultItem
+            key={searchResult.title}
+            searchResult={searchResult}
+            />
+          )
+        })
+return(
         <div className="columns">
         <div className="column is-three-fifths is-offset-one-fifth">
   <section className="section">
     <div className="container">
-      <h2 className="title">Section</h2>
-      <h3 className="subtitle">
-        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-      </h3>
+     {resultList}
     </div>
   </section>
 </div>
