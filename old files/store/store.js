@@ -1,11 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
 
-import { searchTermReducer } from '../reducers/searchReducer';
+import { searchTermReducer, searchDetailReducer } from '../reducers/searchReducer';
 
 const reducer = combineReducers({
-    searchTerm: searchTermReducer
+    searchTerm: searchTermReducer,
+    searchDetail: searchDetailReducer
 })
 const initialState = {}
 const middleware = [thunk]
