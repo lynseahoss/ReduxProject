@@ -6,17 +6,13 @@ import {
 } from "../constants/index";
 import hackerURL from "../../api/hackerURL";
 
-export const searchAction = () => async (dispatch) => {
+export const searchAction = (query) => async (dispatch) => {
   try {
     dispatch({ type: SEARCH_REQUEST });
-    const { data } = await hackerURL.get("/search_by_date?&tags=story", {
-      params: {
-        query: "",
-      },
-    });
+    const response = await hackerURL.get(`/search_by_date?&tags=story&query=${query}` );
     dispatch({
       type: SEARCH_SUCESS,
-      payload: data.hits,
+      payload: response.data.hits,
     });
   } catch (error) {
     dispatch({
