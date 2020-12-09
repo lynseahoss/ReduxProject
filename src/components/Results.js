@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-
+import { searchAction } from '../redux/actions';
 import ResultItem from "./ResultItem";
 
-const Results = ({search}) => {
+const Results = () => {
+const dispatch= useDispatch()
+ const resultList = useSelector((state)=>state.search)
+const getResult = ()=>dispatch(searchAction)
 
- 
+useEffect(()=>{
+  getResult()
+},[])
 
-
-  const searchResult = search.map((searchResult) => {
+  const searchResult = resultList.search.map((searchResult) => {
     return <ResultItem key={searchResult.objectID} searchResult={searchResult} />;
   });
 
