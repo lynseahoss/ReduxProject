@@ -5,14 +5,19 @@ import { searchAction, historyAction } from "../redux/actions";
 const SearchBar = () => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
+
+ 
   const history = useSelector((state) => state.history);
 
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(searchAction(search));
+    setSearch('')
     !history.includes(search) && dispatch(historyAction(search));
     setSearch("");
   };
+
+
 
   return (
     <div className="columns">
