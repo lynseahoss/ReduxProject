@@ -1,12 +1,12 @@
 import { SEARCH_REQUEST, SEARCH_SUCESS, SEARCH_FAIL } from "../constants/index";
 import hackerURL from "../../api/hackerURL";
 
-export const searchTerm = () => async (dispatch) => {
+export const searchAction = () => async (dispatch) => {
   try {
     dispatch({ type: SEARCH_REQUEST });
     const { data } = await hackerURL.get("/search_by_date?&tags=story", {
       params: {
-        query: term,
+        query: '',
       },
     });
     dispatch({
