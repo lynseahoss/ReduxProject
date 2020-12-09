@@ -10,7 +10,7 @@ export const searchReducer = (state = { search: [] }, action) => {
     case SEARCH_REQUEST:
       return { loading: true, search: [] };
     case SEARCH_SUCESS:
-      return { loading: false, search: action.payload };
+      return { loading: false, ...state, search: action.payload };
     case SEARCH_FAIL:
       return { loading: false, error: action.payload };
 
