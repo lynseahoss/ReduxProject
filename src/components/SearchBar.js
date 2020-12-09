@@ -1,50 +1,48 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { searchAction } from '../redux/actions';
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { searchAction, historyAction } from "../redux/actions";
 
 const SearchBar = () => {
-    // const [result, setResult] = useState('')
-    
-    //  const submitHandler = e => {
-    //      e.preventDefault()
-    //     onFormSubmit(result)
-    //  }
+  const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
+  const history = useSelector((state) => state.history);
 
-    const dispatch = useDispatch()
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(searchAction(search));
+    !history.includes(search) && dispatch(historyAction(search));
+    setSearch("");
+  };
 
-
-    useEffect(()=>{
-       dispatch(searchAction())
-    },[dispatch])
-
-    const result = []
-    return (
-        <div className="columns">
-        <div className="column is-three-fifths is-offset-one-fifth">
-          <form className="field" >
-            <input
-              className="input"
-              type="text"
-              placeholder="Hackers News Search"
-           
-             
-            />
-            <div className="columns">
-              <div className="column is-three-fifths is-offset-one-fifth">
-                <div className="control">
-                  <button
-                    className="button is-primary is-fullwidth"
-                    style={{ backgroundColor: "#ea4aaa", margin: "20px" }}
-                  >
-                    Submit
-                  </button>
-                </div>
+  return (
+    <div className="columns">
+      <div className="column is-three-fifths is-offset-one-fifth">
+        <form className="field" onSubmit={submitHandler}>
+          <input
+            className="input"
+            type="text"
+            placeholder="Hackers News Search"
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+            value={search}
+          />
+          <div className="columns">
+            <div className="column is-three-fifths is-offset-one-fifth">
+              <div className="control">
+                <button
+                  className="button is-primary is-fullwidth"
+                  style={{ backgroundColor: "#ea4aaa", margin: "20px" }}
+                >
+                  Submit
+                </button>
               </div>
             </div>
-          </form>
           </div>
-          </div>
-    );
-}
+        </form>
+      </div>
+    </div>
+  );
+};
 
 export default SearchBar;
