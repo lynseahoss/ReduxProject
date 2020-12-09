@@ -11,7 +11,7 @@ export const searchAction = () => async (dispatch) => {
     dispatch({ type: SEARCH_REQUEST });
     const { data } = await hackerURL.get("/search_by_date?&tags=story", {
       params: {
-        query: "data",
+        query: "",
       },
     });
     dispatch({
