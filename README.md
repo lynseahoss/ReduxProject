@@ -1,12 +1,49 @@
 # React-Redux Project
 
-- Requirements
-- Build an application that lets the user search the Hacker News Algolia API and displays a list of results (https://hn.algolia.com/api)
-- Save the user's search terms in the Redux state (don't need to persist across sessions)
+## Project Description
 
-### yarn add
-- redux
-- react-redux
-- redux-thunk
-- axios
-- node-sass@4.14.1
+
+A react-redux application that allows users to search the Hacker News Algolia API and displays a list of results (https://hn.algolia.com/api)
+
+
+## Table of Contents
+  * [Installation](#installation)
+  * [Project Technology](#project-technology)
+  * [Contributing Authors](#contributing-authors)
+
+----
+## Installation
+To install, run following command in terminal:
+```
+yarn install
+```
+
+## Project Technology
+<details>
+    <summary markdown="span">Click to expand Project Technology Details</summary>
+
+Languages
+- HTML
+- CSS
+- Javascript
+
+
+Libraries
+- [React](jhttps://reactjs.org/)
+- [React-Redux](https://react-redux.js.org/)
+- [Redux.js](https://redux.js.org/)
+- [Redux DevTools Extension](https://www.npmjs.com/package/redux-devtools-extension)
+- [Redux-Thunk](https://www.npmjs.com/package/redux-thunk)
+- [Node-Sass](https://sass-lang.com/)
+
+CSS Framework
+- [Bulma](https://bulma.io/)
+
+
+
+</details>
+
+## Contributing Authors
+Lindsey Lawson - [Github](https://github.com/lynseahoss)
+
+
