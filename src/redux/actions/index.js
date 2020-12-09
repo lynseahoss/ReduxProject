@@ -1,4 +1,9 @@
-import { SEARCH_REQUEST, SEARCH_SUCESS, SEARCH_FAIL } from "../constants/index";
+import {
+  SEARCH_REQUEST,
+  SEARCH_SUCESS,
+  SEARCH_FAIL,
+  SAVE_HISTORY
+} from "../constants/index";
 import hackerURL from "../../api/hackerURL";
 
 export const searchAction = () => async (dispatch) => {
@@ -6,7 +11,7 @@ export const searchAction = () => async (dispatch) => {
     dispatch({ type: SEARCH_REQUEST });
     const { data } = await hackerURL.get("/search_by_date?&tags=story", {
       params: {
-        query: '',
+        query: "data",
       },
     });
     dispatch({
@@ -23,3 +28,9 @@ export const searchAction = () => async (dispatch) => {
     });
   }
 };
+  export const historyAction = data => {
+    return{
+      type: SAVE_HISTORY,
+      payload: data
+    }
+  }
