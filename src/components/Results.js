@@ -1,12 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
+
 
 import ResultItem from "./ResultItem";
 
 const Results = ({search}) => {
 
-  // const search = useSelector((state) => state.search);
-  // const { loading, error, result } = search;
+ 
 
 
   const searchResult = search.map((searchResult) => {
