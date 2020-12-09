@@ -14,7 +14,7 @@ const Home = () => {
     },[])
 
     const onSearchSubmit = async(term)=>{
-        const response = await hackerURL.get('/search?&tags=story', {
+        const response = await hackerURL.get('/search_by_date?&tags=story', {
             params:{
                 query:term
             }
