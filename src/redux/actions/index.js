@@ -2,7 +2,8 @@ import {
   SEARCH_REQUEST,
   SEARCH_SUCESS,
   SEARCH_FAIL,
-  SAVE_HISTORY
+  SAVE_HISTORY,
+  RENDER_HISTORY
 } from "../constants/index";
 import hackerURL from "../../api/hackerURL";
 
@@ -27,6 +28,13 @@ export const searchAction = (query) => async (dispatch) => {
   export const historyAction = data => {
     return{
       type: SAVE_HISTORY,
+      payload: data
+    }
+  }
+
+  export const renderHistoryAction = data => {
+    return{
+      type: RENDER_HISTORY,
       payload: data
     }
   }
