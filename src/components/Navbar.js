@@ -9,9 +9,9 @@ const Navbar = () => {
       aria-label="main navigation"
     >
       <div className="navbar-brand">
-        <div className="navbar-item" to="/">
-        HackerNews
-        </div>
+        <Link className="navbar-item" to="/">
+       <strong>HackerNews</strong> 
+        </Link>
 
         <a
           role="button"
