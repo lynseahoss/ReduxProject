@@ -10,7 +10,7 @@ const App=() => {
 <Router>
 <NavBar/>
 <main className="py-3">
-        <div className="container">
+        <div>
           <Route path="/" component={Home} exact/>
         
         </div>
