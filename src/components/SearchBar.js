@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { searchAction, historyAction, renderHistoryAction } from "../redux/actions";
+import {
+  searchAction,
+  historyAction,
+  renderHistoryAction,
+} from "../redux/actions";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -10,8 +14,8 @@ const SearchBar = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(searchAction(search));
-    dispatch(renderHistoryAction(search))
-    setSearch('')
+    dispatch(renderHistoryAction(search));
+    setSearch("");
     !history.includes(search) && dispatch(historyAction(search));
   };
   return (
@@ -27,7 +31,6 @@ const SearchBar = () => {
             }}
             value={search}
             required
-           
           />
           <div className="columns">
             <div className="column is-three-fifths is-offset-one-fifth">

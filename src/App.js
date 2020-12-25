@@ -1,19 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import Home from './pages/Home';
+import Home from "./pages/Home";
 
-
-const App=() => {
+const App = () => {
   return (
-
-<main className="py-3">
-        <div>
-         <Home/>
-        
-        </div>
-      </main>
-
+    <main className="py-3">
+      <div>
+        <Home />
+      </div>
+    </main>
   );
-}
+};
 
 export default App;

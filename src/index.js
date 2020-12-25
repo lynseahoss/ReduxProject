@@ -1,20 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import  store  from './redux/store/store';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./redux/store/store";
 
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
- 
   <Provider store={store}>
     <App />
-    </Provider>,
+  </Provider>,
 
-
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 reportWebVitals();

@@ -3,14 +3,16 @@ import {
   SEARCH_SUCESS,
   SEARCH_FAIL,
   SAVE_HISTORY,
-  RENDER_HISTORY
+  RENDER_HISTORY,
 } from "../constants/index";
 import hackerURL from "../../api/hackerURL";
 
 export const searchAction = (query) => async (dispatch) => {
   try {
     dispatch({ type: SEARCH_REQUEST });
-    const response = await hackerURL.get(`/search_by_date?&tags=story&hitsPerPage=10&query=${query}` );
+    const response = await hackerURL.get(
+      `/search_by_date?&tags=story&hitsPerPage=10&query=${query}`
+    );
     dispatch({
       type: SEARCH_SUCESS,
       payload: response.data.hits,
@@ -25,16 +27,16 @@ export const searchAction = (query) => async (dispatch) => {
     });
   }
 };
-  export const historyAction = data => {
-    return{
-      type: SAVE_HISTORY,
-      payload: data
-    }
-  }
+export const historyAction = (data) => {
+  return {
+    type: SAVE_HISTORY,
+    payload: data,
+  };
+};
 
-  export const renderHistoryAction = data => {
-    return{
-      type: RENDER_HISTORY,
-      payload: data
-    }
-  }
+export const renderHistoryAction = (data) => {
+  return {
+    type: RENDER_HISTORY,
+    payload: data,
+  };
+};
