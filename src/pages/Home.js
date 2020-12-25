@@ -1,34 +1,19 @@
-import React, { useState, useEffect} from 'react';
-import hackerURL from '../api/hackerURL';
-import SearchBar from '../components/SearchBar';
-import Header from '../components/Header';
-import Results from '../components/Results';
+import React, { useState } from "react";
 
-
+import SearchBar from "../components/SearchBar";
+import Header from "../components/Header";
+import Results from "../components/Results";
 
 const Home = () => {
-    const [search, setSearch] = useState([])
+  const [search] = useState([]);
 
-    useEffect(()=>{
-        onSearchSubmit('')
-    },[])
-
-    const onSearchSubmit = async(term)=>{
-        const response = await hackerURL.get('/search_by_date?&tags=story', {
-            params:{
-                query:term
-            }
-        })
-        setSearch(response.data.hits)
-    }
-
-    return (
-        <div>
-            <Header/>
-            <SearchBar onFormSubmit={onSearchSubmit}/>
-            <Results search={search}/>
-        </div>
-    );
-}
+  return (
+    <div>
+      <Header />
+      <SearchBar />
+      <Results search={search} />
+    </div>
+  );
+};
 
 export default Home;
