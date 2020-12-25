@@ -16,10 +16,8 @@ const Results = () => {
   return (
           <div className="container">
     <div className="columns">
-    <div className="column">
-        <History/>
-    </div>
-      <div className="column">
+    
+      <div className="column is-two-thirds is-offset-1">
         <section className="section">
             {loading ? (
               <h2 className="title">Loading...</h2>
@@ -30,6 +28,9 @@ const Results = () => {
             )}
         </section>
           </div>
+          <div className="column is-one-fifth ">
+        <History/>
+    </div>
       </div>
     </div>
   );
