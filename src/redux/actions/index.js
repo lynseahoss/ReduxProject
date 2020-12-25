@@ -10,7 +10,7 @@ import hackerURL from "../../api/hackerURL";
 export const searchAction = (query) => async (dispatch) => {
   try {
     dispatch({ type: SEARCH_REQUEST });
-    const response = await hackerURL.get(`/search_by_date?&tags=story&query=${query}` );
+    const response = await hackerURL.get(`/search_by_date?&tags=story&hitsPerPage=5&query=${query}` );
     dispatch({
       type: SEARCH_SUCESS,
       payload: response.data.hits,
