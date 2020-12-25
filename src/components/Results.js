@@ -10,7 +10,9 @@ const Results = () => {
 
   const searchResult = resultList.search.map((searchResult) => {
     return (
+      <li>
       <ResultItem key={searchResult.objectID} searchResult={searchResult} />
+      </li>
     );
   });
   return (
@@ -20,13 +22,21 @@ const Results = () => {
       <div className="column is-two-thirds is-offset-1">
        
         <section className="section">
-        <h2 className="title has-text-centered">Articles</h2>
+        
             {loading ? (
               <h2 className="title">Loading...</h2>
             ) : error ? (
               <h2 className="subtitle">{error}</h2>
             ) : (
-              [searchResult]
+              <div>
+                <h2 className="title">Articles:</h2>
+              <strong><ol>
+                {searchResult}
+              </ol>
+              </strong>
+              </div>
+              
+             
             )}
         </section>
           </div>
