@@ -18,9 +18,12 @@ const History = () => {
     return (
         <div className="columns">
       <div className="column is-one-third">
-      <button key={data.objectID} className="button" style={{ backgroundColor: "#ea4aaa", color:"white", textTransform:"uppercase" }}  onClick={() => submitHistory(data)}>
+          
+
+      <button key={data} className="button" style={{ backgroundColor: "#ea4aaa", color:"white", textTransform:"uppercase" }}  onClick={() => submitHistory(data)}>
         <strong>{data}</strong>
       </button>
+          
       </div>
       </div>
     );
