@@ -16,6 +16,7 @@ const ResultItem = ({ searchResult }) => {
           </a>
         </strong>
       </h2>
+      <p style={{ textTransform: "uppercase" }}>- {searchResult.author}</p>
       <br />
     </div>
   );
