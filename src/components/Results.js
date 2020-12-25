@@ -18,7 +18,9 @@ const Results = () => {
     <div className="columns">
     
       <div className="column is-two-thirds is-offset-1">
+       
         <section className="section">
+        <h2 className="title has-text-centered">Articles</h2>
             {loading ? (
               <h2 className="title">Loading...</h2>
             ) : error ? (
