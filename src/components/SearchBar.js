@@ -1,24 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { searchAction, historyAction } from "../redux/actions";
+import { searchAction, historyAction, renderHistoryAction } from "../redux/actions";
 
 const SearchBar = () => {
-  const [search, setSearch] = useState("");
   const dispatch = useDispatch();
-
- 
+  const [search, setSearch] = useState("");
   const history = useSelector((state) => state.history);
 
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(searchAction(search));
+    dispatch(renderHistoryAction(search))
     setSearch('')
     !history.includes(search) && dispatch(historyAction(search));
-    setSearch("");
   };
-
-
-
   return (
     <div className="columns">
       <div className="column is-three-fifths is-offset-one-fifth">
