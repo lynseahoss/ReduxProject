@@ -10,8 +10,8 @@ const Results = () => {
 
   const searchResult = resultList.search.map((searchResult) => {
     return (
-      <li>
-      <ResultItem key={searchResult.objectID} searchResult={searchResult} />
+      <li key={searchResult.objectID}>
+      <ResultItem  searchResult={searchResult} />
       </li>
     );
   });
