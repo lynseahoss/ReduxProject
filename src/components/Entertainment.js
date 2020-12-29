@@ -25,9 +25,28 @@ const Entertainment = () => {
       });
 
     return (
-        <div>
-            
-        </div>
+        <div className="container">
+        <div className="columns">
+            <div className="column">
+
+      <h1 className="newsTitle title">
+        Entertainment
+      </h1>
+            </div>
+            </div>
+      <div className="columns">
+        <div className="column  is-offset-1">
+        {loading ? (
+          <h2 className="subtitle">Loading...</h2>
+        ) : error ? (
+          <h2 className="subtitle mb-0">{error}</h2>
+        ) : (
+          <ol>{entertainmentResult}</ol>
+        )}
+      </div>
+      </div>
+      
+    </div>
     );
 }
 
