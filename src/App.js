@@ -1,14 +1,24 @@
 import React from "react";
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
+import Navbar from './components/Navbar';
 import Home from "./pages/Home";
+import FrontPageNews from './pages/FrontPage';
+import Entertainment from './pages/Entertainment';
 
 const App = () => {
   return (
+    <Router>
+    <Navbar />
     <main className="py-3">
-      <div>
-        <Home />
+      <div className="container">
+        <Route path="/" component={Home} exact />
+        <Route path="/topnews" component={FrontPageNews} />
+        <Route path="/entertainment" component={Entertainment} />
       </div>
     </main>
+    
+  </Router>
   );
 };
 
