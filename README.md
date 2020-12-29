@@ -48,6 +48,9 @@ CSS Framework
 </details>
 
 ## Screen Shots
+<details>
+    <summary markdown="span">Click to expand ScreenShot Details</summary>
+ 
 ![HackerNewsHome](https://github.com/lynseahoss/ReduxProject/blob/main/public/images/hnHome.png?raw=true)
 
 
@@ -56,6 +59,7 @@ CSS Framework
 
 ![HackerNewsEnt](https://github.com/lynseahoss/ReduxProject/blob/main/public/images/hnEnt.png?raw=true)
 
+</details>
 
 ## Contributing Authors
 Lindsey Lawson - [Github](https://github.com/lynseahoss)
