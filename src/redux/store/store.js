@@ -4,13 +4,17 @@ import thunk from "redux-thunk";
 
 import {
   searchReducer,
-  historyReducer
+  historyReducer,
+  renderHistoryReducer,
+  frontPageReducer
 } from "../reducers";
 
 const reducer = combineReducers({
   // search state
   search: searchReducer,
   history: historyReducer,
+  renderHistory: renderHistoryReducer,
+  frontPage: frontPageReducer
 });
 const initialState = {};
 const middleware = [thunk];
