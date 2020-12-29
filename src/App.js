@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from "./pages/Home";
 import FrontPageNews from './pages/FrontPage';
-import Entertainment from './pages/Entertainment';
+import EntertainmentPage from './pages/EntertainmentPage';
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
       <div className="container">
         <Route path="/" component={Home} exact />
         <Route path="/topnews" component={FrontPageNews} />
-        <Route path="/entertainment" component={Entertainment} />
+        <Route path="/entertainment" component={EntertainmentPage} />
       </div>
     </main>
     

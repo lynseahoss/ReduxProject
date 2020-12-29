@@ -6,7 +6,8 @@ import {
   searchReducer,
   historyReducer,
   renderHistoryReducer,
-  frontPageReducer
+  frontPageReducer,
+  entertainmentReducer
 } from "../reducers";
 
 const reducer = combineReducers({
@@ -14,7 +15,8 @@ const reducer = combineReducers({
   search: searchReducer,
   history: historyReducer,
   renderHistory: renderHistoryReducer,
-  frontPage: frontPageReducer
+  frontPage: frontPageReducer,
+  entertainment: entertainmentReducer
 });
 const initialState = {};
 const middleware = [thunk];

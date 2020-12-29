@@ -6,7 +6,10 @@ import {
   FRONT_STORY_REQUEST,
   FRONT_STORY_SUCESS,
   FRONT_STORY_FAIL,
-  RENDER_HISTORY
+  RENDER_HISTORY,
+  ENTERTAINMENT_REQUEST,
+  ENTERTAINMENT_SUCESS,
+  ENTERTAINMENT_FAIL
 } from "../constants/index";
 
 export const searchReducer = (state = { search: [] }, action) => {
@@ -48,6 +51,19 @@ export const frontPageReducer = (state = { search: [] }, action) => {
     case FRONT_STORY_SUCESS:
       return { loading: false, search: action.payload };
     case FRONT_STORY_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const entertainmentReducer = (state = { search: [] }, action) => {
+  switch (action.type) {
+    case ENTERTAINMENT_REQUEST:
+      return { loading: true, search: [] };
+    case ENTERTAINMENT_SUCESS:
+      return { loading: false, search: action.payload };
+    case ENTERTAINMENT_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;
