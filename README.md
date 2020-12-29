@@ -5,10 +5,12 @@
 
 A react-redux application that allows users to search the Hacker News Algolia API and displays a list of results (https://hn.algolia.com/api)
 
+![HackerNewsHome](../images/hnHome.png)
 
 ## Table of Contents
   * [Installation](#installation)
   * [Project Technology](#project-technology)
+  * [Screen Shots](#screen-shots)
   * [Contributing Authors](#contributing-authors)
 
 ----
@@ -34,7 +36,9 @@ Libraries
 - [Redux.js](https://redux.js.org/)
 - [Redux DevTools Extension](https://www.npmjs.com/package/redux-devtools-extension)
 - [Redux-Thunk](https://www.npmjs.com/package/redux-thunk)
+- [React-Router-Dom](https://reactrouter.com/web/guides/quick-start)
 - [Node-Sass](https://sass-lang.com/)
+
 
 CSS Framework
 - [Bulma](https://bulma.io/)
@@ -42,6 +46,16 @@ CSS Framework
 
 
 </details>
+
+## Screen Shots
+![HackerNewsHome](../images/hnHome.png)
+
+
+![HackerNewsTop](../images/hnTop.png)
+
+
+![HackerNewsEnt](../images/hnEnt.png)
+
 
 ## Contributing Authors
 Lindsey Lawson - [Github](https://github.com/lynseahoss)
