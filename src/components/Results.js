@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import ResultItem from "./ResultItem";
 import History from "./History";
 
+
 const Results = () => {
   const resultList = useSelector((state) => state.search);
   const { loading, error } = resultList;
@@ -18,6 +19,7 @@ const Results = () => {
   return (
     <div className="container">
       <div className="columns">
+      
         <div className="column is-two-thirds is-offset-1">
           <section className="section">
             {loading ? (
@@ -34,10 +36,13 @@ const Results = () => {
             )}
           </section>
         </div>
-        <div className="column is-one-fifth ">
+       
+          <div className="column is-one-fifth">
           <History />
         </div>
+        
       </div>
+
     </div>
   );
 };
