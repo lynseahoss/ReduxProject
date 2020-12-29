@@ -28,11 +28,11 @@ const FrontPage = () => {
   return (
     <div className="container">
         <div className="columns">
-            <div className="column is-offset-5">
+            <div className="column">
 
-      <div className="title mb-2">
+      <h1 className="newsTitle title">
         Top Stories 
-      </div>
+      </h1>
             </div>
             </div>
       <div className="columns">
