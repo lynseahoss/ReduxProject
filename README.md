@@ -5,7 +5,7 @@
 
 A react-redux application that allows users to search the Hacker News Algolia API and displays a list of results (https://hn.algolia.com/api)
 
-![HackerNewsHome](../images/hnHome.png)
+![HackerNewsHome]()
 
 ## Table of Contents
   * [Installation](#installation)
@@ -48,13 +48,13 @@ CSS Framework
 </details>
 
 ## Screen Shots
-![HackerNewsHome](../images/hnHome.png)
+![HackerNewsHome](https://github.com/lynseahoss/ReduxProject/blob/main/public/images/hnHome.png?raw=true)
 
 
-![HackerNewsTop](../images/hnTop.png)
+![HackerNewsTop](https://github.com/lynseahoss/ReduxProject/blob/main/public/images/hnTop.png?raw=true)
 
 
-![HackerNewsEnt](../images/hnEnt.png)
+![HackerNewsEnt](https://github.com/lynseahoss/ReduxProject/blob/main/public/images/hnEnt.png?raw=true)
 
 
 ## Contributing Authors
