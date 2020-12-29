@@ -4,6 +4,9 @@ import {
   SEARCH_FAIL,
   SAVE_HISTORY,
   RENDER_HISTORY,
+  FRONT_STORY_REQUEST,
+  FRONT_STORY_SUCESS,
+  FRONT_STORY_FAIL,
 } from "../constants/index";
 import hackerURL from "../../api/hackerURL";
 
@@ -39,4 +42,25 @@ export const renderHistoryAction = (data) => {
     type: RENDER_HISTORY,
     payload: data,
   };
+};
+
+export const frontStoryAction = () => async (dispatch) => {
+  try {
+    dispatch({ type: FRONT_STORY_REQUEST });
+    const response = await hackerURL.get(
+      "search?tags=front_page&hitsPerPage=10"
+    );
+    dispatch({
+      type: FRONT_STORY_SUCESS,
+      payload: response.data.hits,
+    });
+  } catch (error) {
+    dispatch({
+      type: FRONT_STORY_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
 };
