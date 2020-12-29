@@ -3,7 +3,7 @@
 ## Project Description
 
 
-A react-redux application that allows users to search the Hacker News Algolia API and displays a list of results (https://hn.algolia.com/api)
+A react-redux application that allows users to search the [Hacker News Algolia API](https://hn.algolia.com/api) and displays a list of results 
 
 ![HackerNewsHome](https://github.com/lynseahoss/ReduxProject/blob/main/public/images/hnHome.png?raw=true)
 
