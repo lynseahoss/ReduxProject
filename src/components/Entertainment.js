@@ -9,6 +9,11 @@ const Entertainment = () => {
     const dispatch = useDispatch();
     const { loading, error, search } = entertainment;
 
+    useEffect(() => {
+        dispatch(entertainmentAction())
+        
+    }, [dispatch]);
+
     return (
         <div>
             
